@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola do Implantodontista — Método 4.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-deep: #0B1623;
+            --navy: #152B45;
+            --navy-mid: #1E3A5F;
+            --gold: #C6952B;
+            --gold-light: #D4A83A;
+            --gold-bg: #FDF8EF;
+            --gold-bg-alt: #FAF0DC;
+            --green: #15794A;
+            --green-light: #ECFDF5;
+            --green-bg: #D1FAE5;
+            --red: #B91C1C;
+            --red-light: #FEF2F2;
+            --red-bg: #FEE2E2;
+            --cream: #FAF8F5;
+            --white: #FFFFFF;
+            --text: #1C1C1C;
+            --text-muted: #5F6B7A;
+            --text-light: #8896A6;
+            --border: #E5E7EB;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+            --shadow-gold: 0 4px 24px rgba(198, 149, 43, 0.2);
+            --radius: 12px;
+            --radius-lg: 20px;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === UTILITY === */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-wide {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .text-green {
+            color: var(--green);
+        }
+
+        .text-red {
+            color: var(--red);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .text-white {
+            color: var(--white);
+        }
+
+        .font-display {
+            font-family: var(--font-display);
+        }
+
+        .mt-1 {
+            margin-top: 8px;
+        }
+
+        .mt-2 {
+            margin-top: 16px;
+        }
+
+        .mt-3 {
+            margin-top: 24px;
+        }
+
+        .mt-4 {
+            margin-top: 32px;
+        }
+
+        .mb-2 {
+            margin-bottom: 16px;
+        }
+
+        .mb-3 {
+            margin-bottom: 24px;
+        }
+
+        .mb-4 {
+            margin-bottom: 32px;
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            background: linear-gradient(170deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+            padding: 80px 0 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(198, 149, 43, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(198, 149, 43, 0.3), transparent);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(198, 149, 43, 0.12);
+            border: 1px solid rgba(198, 149, 43, 0.25);
+            color: var(--gold-light);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 6vw, 52px);
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero h1 .gold {
+            color: var(--gold-light);
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            max-width: 640px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero-proof {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-proof-item {
+            text-align: center;
+        }
+
+        .hero-proof-item .number {
+            font-family: var(--font-display);
+            font-size: 36px;
+            color: var(--gold-light);
+            display: block;
+        }
+
+        .hero-proof-item .label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* === SOCIAL PROOF === */
+        .social-proof-section {
+            padding: 0 0 60px;
+            background: var(--navy-deep);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-proof-img-wrapper {
+            position: relative;
+            width: 100%;
+            max-height: 520px;
+            overflow: hidden;
+        }
+
+        .social-proof-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 520px;
+        }
+
+        .social-proof-placeholder {
+            width: 100%;
+            height: 320px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(198, 149, 43, 0.15);
+            border-bottom: 1px solid rgba(198, 149, 43, 0.15);
+        }
+
+        .social-proof-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, transparent, var(--navy-deep));
+            pointer-events: none;
+        }
+
+        .social-proof-caption {
+            position: relative;
+            z-index: 2;
+            margin-top: -40px;
+            padding: 0 20px;
+        }
+
+        .social-proof-caption .sp-main {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 4vw, 36px);
+            color: var(--gold-light);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .social-proof-caption .sp-sub {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* === SECTIONS === */
+        section {
+            padding: 72px 0;
+        }
+
+        section.dark {
+            background: var(--navy-deep);
+            color: var(--white);
+        }
+
+        section.cream {
+            background: var(--cream);
+        }
+
+        section.white {
+            background: var(--white);
+        }
+
+        section.gold-bg {
+            background: var(--gold-bg);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .dark .section-label {
+            color: var(--gold-light);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4.5vw, 42px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto 40px;
+        }
+
+        .dark .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* === NEWS CARDS === */
+        .news-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .news-card {
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card.good {
+            background: var(--green-light);
+            border: 1px solid #A7F3D0;
+        }
+
+        .news-card.bad {
+            background: var(--red-light);
+            border: 1px solid #FECACA;
+        }
+
+        .news-card .card-label {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .news-card.good .card-label {
+            color: var(--green);
+        }
+
+        .news-card.bad .card-label {
+            color: var(--red);
+        }
+
+        .news-card h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .news-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* === BONUS CARDS === */
+        .bonus-section {
+            counter-reset: bonus;
+        }
+
+        .bonus-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .bonus-card.exclusive {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .bonus-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 28px;
+            background: var(--navy-deep);
+            color: var(--white);
+        }
+
+        .bonus-card.exclusive .bonus-header {
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+        }
+
+        .bonus-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(198, 149, 43, 0.2);
+            border: 1px solid rgba(198, 149, 43, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: var(--gold-light);
+            flex-shrink: 0;
+        }
+
+        .bonus-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            flex: 1;
+        }
+
+        .bonus-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .exclusive-tag {
+            background: rgba(198, 149, 43, 0.2);
+            color: var(--gold-light);
+            border: 1px solid rgba(198, 149, 43, 0.3);
+        }
+
+        .all-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .bonus-body {
+            padding: 28px;
+        }
+
+        .bonus-body p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .bonus-availability {
+            padding: 14px 18px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        .avail-exclusive {
+            background: var(--gold-bg);
+            color: #92700F;
+            border: 1px solid #E5D5A0;
+        }
+
+        .avail-mixed {
+            background: var(--gold-bg-alt);
+            color: #6B5210;
+            border: 1px solid #E5D5A0;
+        }
+
+        .avail-both {
+            background: var(--green-light);
+            color: var(--green);
+            border: 1px solid #A7F3D0;
+        }
+
+        /* === COMPARISON TABLE === */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin: 40px 0;
+            font-size: 15px;
+        }
+
+        .comparison-table thead th {
+            background: var(--navy-deep);
+            color: var(--white);
+            padding: 16px 12px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .comparison-table thead th.col-sunday {
+            background: linear-gradient(135deg, #1a4a2e, #15794A);
+            color: #A7F3D0;
+        }
+
+        .comparison-table thead th.col-monday {
+            background: var(--navy);
+        }
+
+        .comparison-table tbody td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        .comparison-table tbody td:first-child {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover td {
+            background: var(--gold-bg);
+        }
+
+        /* === GUARANTEE === */
+        .guarantee-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 640px) {
+            .guarantee-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .guarantee-card {
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .guarantee-card.g1 {
+            background: var(--green-light);
+            border: 2px solid #A7F3D0;
+        }
+
+        .guarantee-card.g2 {
+            background: var(--gold-bg);
+            border: 2px solid #E5D5A0;
+        }
+
+        .guarantee-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-card h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            margin-bottom: 16px;
+            line-height: 1.3;
+            color: var(--text);
+        }
+
+        .guarantee-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-highlight {
+            font-weight: 800;
+            font-size: 16px;
+            padding: 12px 16px;
+            border-radius: var(--radius);
+        }
+
+        .g1 .guarantee-highlight {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+
+        .g2 .guarantee-highlight {
+            background: var(--gold-bg-alt);
+            color: #92700F;
+        }
+
+        /* === ALERT BOX === */
+        .alert-box {
+            background: var(--white);
+            border: 2px solid #FECACA;
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .alert-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .alert-box h3 {
+            font-family: var(--font-display);
+            font-size: 26px;
+            color: var(--red);
+            margin-bottom: 16px;
+        }
+
+        .alert-box>.text-center>p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .alert-rules {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .alert-rule {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            background: var(--red-light);
+            border-radius: var(--radius);
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .alert-rule-num {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--red);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* === VIP SECTION === */
+        .vip-section {
+            background: linear-gradient(170deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vip-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(198, 149, 43, 0.3), transparent);
+        }
+
+        .vip-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(198, 149, 43, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 48px 36px;
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .vip-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, rgba(198, 149, 43, 0.3), transparent 50%, rgba(198, 149, 43, 0.1));
+            z-index: -1;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: xor;
+            padding: 1px;
+        }
+
+        .vip-card h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 38px);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .vip-card h2 .gold {
+            color: var(--gold-light);
+        }
+
+        .vip-card p {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .vip-card p strong {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* === CTA BUTTONS === */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 40px;
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--white);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .cta-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(198, 149, 43, 0.35);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* === FLOATING CTA === */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 22, 35, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px 24px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            border-top: 1px solid rgba(198, 149, 43, 0.2);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .floating-cta.visible {
+            transform: translateY(0);
+        }
+
+        .floating-cta .float-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            display: none;
+        }
+
+        @media (min-width: 600px) {
+            .floating-cta .float-text {
+                display: block;
+            }
+        }
+
+        .floating-cta .cta-btn {
+            padding: 14px 28px;
+            font-size: 14px;
+            animation: pulse 3s infinite;
+        }
+
+        /* === CLOSING SECTION === */
+        .closing {
+            background: linear-gradient(170deg, var(--navy-deep) 0%, var(--navy) 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .closing-quote {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 4vw, 36px);
+            color: var(--gold-light);
+            font-style: italic;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        .closing-author {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 8px;
+        }
+
+        .closing-name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--white);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 600px) {
+            section {
+                padding: 56px 0;
+            }
+
+            .hero {
+                padding: 60px 0 56px;
+            }
+
+            .hero-proof {
+                gap: 24px;
+            }
+
+            .vip-section {
+                padding: 56px 0;
+            }
+
+            .guarantee-card {
+                padding: 28px 24px;
+            }
+
+            .news-card {
+                padding: 28px 24px;
+            }
+
+            .alert-box {
+                padding: 28px 20px;
+            }
+
+            .bonus-header {
+                padding: 16px 20px;
+                flex-wrap: wrap;
+            }
+
+            .bonus-body {
+                padding: 20px;
+            }
+
+            .bonus-tag {
+                margin-top: 8px;
+            }
+
+            .comparison-table {
+                font-size: 13px;
+            }
+
+            .comparison-table thead th,
+            .comparison-table tbody td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="container text-center">
+            <div class="hero-badge"><span class="dot"></span> EVENTO O NOVO PLANO DA IMPLANTODONTIA</div>
+            <h1>
+                Tudo que você precisa saber antes de se inscrever no
+                <span class="gold">Método 4.0 da Escola do Implantodontista</span>
+            </h1>
+            <p class="hero-subtitle">
+                Leia esta página com atenção. Aqui você vai encontrar cada detalhe da formação,
+                os bônus exclusivos, as garantias e exatamente como garantir sua vaga.
+            </p>
+            <div class="hero-proof">
+                <div class="hero-proof-item">
+                    <span class="number">+2.500</span>
+                    <span class="label">Alunos</span>
+                </div>
+                <div class="hero-proof-item">
+                    <span class="number">+45</span>
+                    <span class="label">Turmas</span>
+                </div>
+                <div class="hero-proof-item">
+                    <span class="number">97%</span>
+                    <span class="label">Satisfação</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROVA SOCIAL ============ -->
+    <section class="social-proof-section">
+        <div class="social-proof-img-wrapper">
+            <img src="./congresso-2025.jpg" alt="Alunos da Escola do Implantodontista no palco do Congresso 2025"
+                class="social-proof-img">
+            <div class="social-proof-overlay"></div>
+        </div>
+        <div class="container text-center">
+            <div class="social-proof-caption animate-in">
+                <p class="sp-main">Eles subiram no palco. Agora é a sua vez.</p>
+                <p class="sp-sub">Alunos reconhecidos no Maior evento de Implantodontia 4.0 a Imersão Implanto
+                    Revolution 4.0, um encontro anual realizado pela Escola do Implantodontista onde reconhecemos os
+                    alunos que dominaram o método e hoje são referências em suas cidades e regiões.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BOA E MÁ NOTÍCIA ============ -->
+    <section class="cream">
+        <div class="container text-center">
+            <span class="section-label animate-in">Antes de tudo</span>
+            <h2 class="section-title animate-in">Tenho uma boa notícia<br>e uma má notícia.</h2>
+        </div>
+        <div class="container">
+            <div class="news-grid">
+                <div class="news-card good animate-in">
+                    <div class="card-label">✅ A boa notícia</div>
+                    <h3>A Escola do Implantodontista vai abrir novas vagas.</h3>
+                    <p>Se você acompanhou as aulas do evento <em>O Novo Plano da Implantodontia</em>, já entendeu que
+                        existe um método comprovado para dominar a carga imediata — mesmo em casos atróficos, sem
+                        depender de enxertos, com previsibilidade e segurança. E agora você terá a chance de acessar
+                        esse método completo.</p>
+                </div>
+                <div class="news-card bad animate-in">
+                    <div class="card-label">⚠️ A má notícia</div>
+                    <h3>Nem todos vão conseguir entrar.</h3>
+                    <p>Os bônus mais valiosos são exclusivos para quem agir primeiro. Quem estiver ao vivo no domingo à
+                        noite vai receber uma oferta exclusiva com bônus especiais que <strong>não se repetirão
+                            mais</strong>. Quem deixar para segunda já perde vantagens importantes. Continue lendo para
+                        entender exatamente o que está em jogo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ O QUE É O MÉTODO 4.0 ============ -->
+    <section class="white">
+        <div class="container text-center">
+            <span class="section-label animate-in">A Formação</span>
+            <h2 class="section-title animate-in">O que é o <span class="text-gold">Método 4.0</span> da Escola do
+                Implantodontista</h2>
+            <p class="section-subtitle animate-in">A formação online mais completa do Brasil em carga imediata, com
+                mentoria, prática supervisionada e acompanhamento individualizado.</p>
+        </div>
+        <div class="container">
+            <div class="news-card good animate-in" style="background: var(--gold-bg); border-color: #E5D5A0;">
+                <p style="color: var(--text); font-size: 17px; line-height: 1.9;">
+                    O Método 4.0 é o sistema que o Dr. Márcio Foletto desenvolveu em mais de 15 anos de prática clínica
+                    e mais de 3.000 reabilitações totais realizadas. Ele reúne as técnicas mais avançadas de
+                    implantodontia — All-on-4, Pterigoide, Zigomático, Transnasal, Transinusal, Vomer e combinações
+                    híbridas — em um único método estruturado, com protocolos claros, do planejamento à finalização.
+                </p>
+                <p style="color: var(--text); font-size: 17px; line-height: 1.9; margin-top: 16px;">
+                    Você terá acesso a <strong>6 módulos completos</strong>, sessões de <strong>Hands-on ao vivo com
+                        mentores</strong>, <strong>consultorias individuais</strong> para seus casos clínicos, e uma
+                    comunidade de cirurgiões que estão no mesmo caminho. O acesso é de <strong>12 meses</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BÔNUS ============ -->
+    <section class="dark bonus-section">
+        <div class="container text-center">
+            <span class="section-label animate-in">Bônus Exclusivos</span>
+            <h2 class="section-title text-white animate-in">O que você recebe<br><span class="text-gold">além do
+                    método</span></h2>
+            <p class="section-subtitle animate-in">Cada bônus foi pensado para acelerar sua implementação. Mas atenção:
+                alguns são exclusivos para quem agir primeiro.</p>
+        </div>
+
+        <div class="container">
+
+            <!-- BONUS 1 -->
+            <div class="bonus-card exclusive animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">1</div>
+                    <div class="bonus-title">Acesso VIP aos Bastidores</div>
+                    <span class="bonus-tag exclusive-tag">3 Primeiros</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Acompanhe de perto como o Dr. Márcio e sua equipe organizam, planejam e executam os casos com os
+                        alunos avançados. Um acesso que não está à venda em lugar nenhum.</p>
+                    <div class="bonus-availability avail-exclusive">
+                        🔒 Apenas 3 vagas — exclusivo para os 3 primeiros inscritos do domingo
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 2 -->
+            <div class="bonus-card exclusive animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">2</div>
+                    <div class="bonus-title">Macro Modelo Realístico — Enviado na Sua Casa</div>
+                    <span class="bonus-tag exclusive-tag">Vantagem Domingo</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Um modelo anatômico realístico para treinar durante as sessões de Hands-on ao vivo. Com
+                        supervisão dos mentores, você pratica em casa antes de ir para o paciente.</p>
+                    <div class="bonus-availability avail-mixed">
+                        <strong>🟢 Domingo:</strong> TODOS os inscritos com residência no Brasil recebem 100% grátis<br>
+                        <strong>🟠 Segunda:</strong> Apenas os 10 primeiros inscritos
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 3 -->
+            <div class="bonus-card animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">3</div>
+                    <div class="bonus-title">Treinamento de Vendas na Implantodontia</div>
+                    <span class="bonus-tag all-tag">Dom + Seg</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Treinamento completo para triplicar seus fechamentos de protocolo. Como apresentar, como
+                        precificar, como converter o paciente. Saber operar é metade — saber vender o tratamento é a
+                        outra.</p>
+                    <div class="bonus-availability avail-both">
+                        ✅ Disponível para inscritos de domingo e segunda
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 4 -->
+            <div class="bonus-card exclusive animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">4</div>
+                    <div class="bonus-title">Template Pessoal de Vendas do Dr. Márcio</div>
+                    <span class="bonus-tag exclusive-tag">Exclusivo Domingo</span>
+                </div>
+                <div class="bonus-body">
+                    <p>A apresentação que o Dr. Márcio usa no consultório para vender protocolos de alto valor. Pronta
+                        para usar. Só insere seus dados e apresenta ao paciente.</p>
+                    <div class="bonus-availability avail-exclusive">
+                        🔒 Exclusivo para quem se inscrever no domingo — não estará disponível na segunda
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 5 -->
+            <div class="bonus-card animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">5</div>
+                    <div class="bonus-title">MasterClass ao Vivo</div>
+                    <span class="bonus-tag all-tag">Dom + Seg</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Sessões ao vivo com o Dr. Márcio para tirar dúvidas, simular casos clínicos e evitar as
+                        complicações mais comuns. O aprendizado que não cabe em vídeo gravado.</p>
+                    <div class="bonus-availability avail-both">
+                        ✅ Disponível para inscritos de domingo e segunda
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 6 -->
+            <div class="bonus-card exclusive animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">6</div>
+                    <div class="bonus-title">Prioridade na Mentoria com Dr. Márcio</div>
+                    <span class="bonus-tag exclusive-tag">Exclusivo Domingo</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Quem se inscrever no domingo terá prioridade direta nas sessões de mentoria com o Dr. Márcio.
+                        Seus casos serão analisados primeiro. Sua evolução será acompanhada de perto.</p>
+                    <div class="bonus-availability avail-exclusive">
+                        🔒 Exclusivo para quem se inscrever no domingo — na segunda, sem prioridade
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 7 -->
+            <div class="bonus-card animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">7</div>
+                    <div class="bonus-title">Cashback Jornada Completa</div>
+                    <span class="bonus-tag all-tag">Dom + Seg</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Quando você decidir evoluir para a Experiência Presencial 4.0, o valor que investiu na Escola
+                        volta integralmente como crédito. É como se a Escola fosse gratuita quando você completa a
+                        jornada.</p>
+                    <div class="bonus-availability avail-both">
+                        ✅ Disponível para todos — válido por 24 meses
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONUS 8 -->
+            <div class="bonus-card exclusive animate-in">
+                <div class="bonus-header">
+                    <div class="bonus-number">8</div>
+                    <div class="bonus-title">Acesso Antecipado</div>
+                    <span class="bonus-tag exclusive-tag">Exclusivo Domingo</span>
+                </div>
+                <div class="bonus-body">
+                    <p>Quem se inscrever no domingo não precisa esperar segunda. Seu acesso é liberado na hora. Você sai
+                        da aula e já pode começar a estudar.</p>
+                    <div class="bonus-availability avail-exclusive">
+                        🔒 Exclusivo domingo — quem entra segunda, acesso liberado junto com todos
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ TABELA COMPARATIVA ============ -->
+    <section class="gold-bg">
+        <div class="container text-center">
+            <span class="section-label animate-in">Visão Geral</span>
+            <h2 class="section-title animate-in">Domingo vs Segunda</h2>
+            <p class="section-subtitle animate-in" style="color: #6B5210;">Veja exatamente o que muda dependendo de
+                quando você se inscreve.</p>
+        </div>
+        <div class="container-wide">
+            <table class="comparison-table animate-in">
+                <thead>
+                    <tr>
+                        <th>Bônus</th>
+                        <th class="col-sunday">Domingo</th>
+                        <th class="col-monday">Segunda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acesso VIP Bastidores</td>
+                        <td>3 primeiros</td>
+                        <td>3 primeiros</td>
+                    </tr>
+                    <tr>
+                        <td>Macro Modelo Realístico</td>
+                        <td style="color: var(--green); font-weight: 700;">✅ TODOS</td>
+                        <td style="color: #B45309; font-weight: 600;">⚠️ 10 primeiros</td>
+                    </tr>
+                    <tr>
+                        <td>Treinamento de Vendas</td>
+                        <td style="color: var(--green);">✅</td>
+                        <td style="color: var(--green);">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Template de Vendas Dr. Márcio</td>
+                        <td style="color: var(--green); font-weight: 700;">✅ EXCLUSIVO</td>
+                        <td style="color: var(--red);">❌</td>
+                    </tr>
+                    <tr>
+                        <td>MasterClass ao Vivo</td>
+                        <td style="color: var(--green);">✅</td>
+                        <td style="color: var(--green);">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Prioridade Mentoria Dr. Márcio</td>
+                        <td style="color: var(--green); font-weight: 700;">✅ EXCLUSIVO</td>
+                        <td style="color: var(--red);">❌</td>
+                    </tr>
+                    <tr>
+                        <td>Cashback Jornada Completa</td>
+                        <td style="color: var(--green);">✅ Valor integral</td>
+                        <td style="color: var(--green);">✅ Valor integral</td>
+                    </tr>
+                    <tr>
+                        <td>Acesso Antecipado</td>
+                        <td style="color: var(--green); font-weight: 700;">✅ Na hora</td>
+                        <td style="color: var(--text-light);">⏳ Segunda</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============ GARANTIA ============ -->
+    <section class="white">
+        <div class="container text-center">
+            <span class="section-label animate-in">Garantia</span>
+            <h2 class="section-title animate-in">O risco é nosso.<br>O resultado é seu.</h2>
+            <p class="section-subtitle animate-in">
+                Eu não quero que medo ou insegurança impeça você de dar o próximo passo. Por isso, eu vou além.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="guarantee-grid">
+                <div class="guarantee-card g1 animate-in">
+                    <div class="guarantee-icon">🛡️</div>
+                    <h3>Garantia Incondicional<br>7 Dias</h3>
+                    <p>Acesse o conteúdo, explore a plataforma. Se por qualquer motivo quiser desistir em até 7 dias —
+                        sem questionamentos — devolvemos 100% do valor investido.</p>
+                    <div class="guarantee-highlight">
+                        Risco zero. Sem perguntas.
+                    </div>
+                </div>
+
+                <div class="guarantee-card g2 animate-in">
+                    <div class="guarantee-icon">💎</div>
+                    <h3>Garantia Condicional<br>de Resultado</h3>
+                    <p>Siga o método, participe do Hands-on, execute o planejamento, solicite consultoria com um mentor.
+                        Se mesmo assim não conseguir resolver 1 caso que justifique o investimento...</p>
+                    <div class="guarantee-highlight">
+                        Devolvemos 100% + R$ 1.000 do nosso bolso.
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center mt-4 animate-in"
+                style="font-size: 17px; color: var(--text-muted); max-width: 580px; margin-left: auto; margin-right: auto;">
+                <strong style="color: var(--navy);">A única forma de perder é não tentar.</strong><br>
+                Se o método não funcionar para você — e você seguir o processo — nós pagamos para você ter tentado.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ ALERTA GOLPISTAS ============ -->
+    <section class="cream">
+        <div class="container">
+            <div class="alert-box animate-in">
+                <div class="text-center">
+                    <div class="alert-icon">⚠️</div>
+                    <h3>Cuidado com Golpistas</h3>
+                    <p>Em todo lançamento, golpistas enviam links falsos, ofertas absurdas e promoções inexistentes.
+                        Eles podem dizer que o Dr. Márcio liberou uma oferta com 80% de desconto. <strong
+                            style="color: var(--red);">TUDO ISSO É GOLPE.</strong></p>
+                </div>
+
+                <div class="alert-rules">
+                    <div class="alert-rule">
+                        <span class="alert-rule-num">1</span>
+                        O ÚNICO link oficial de inscrição será enviado pelo Grupo Oficial do evento
+                    </div>
+                    <div class="alert-rule">
+                        <span class="alert-rule-num">2</span>
+                        Confie APENAS nos números oficiais da Escola do Implantodontista
+                    </div>
+                    <div class="alert-rule">
+                        <span class="alert-rule-num">3</span>
+                        O preço será revelado apenas no domingo (08/02). Qualquer valor antes disso é falso.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="white">
+        <div class="container text-center">
+            <span class="section-label animate-in">Como Funciona</span>
+            <h2 class="section-title animate-in">Cronograma de Inscrições</h2>
+        </div>
+        <div class="container">
+            <div class="news-grid">
+                <div class="news-card animate-in"
+                    style="background: var(--navy-deep); border: 1px solid rgba(198,149,43,0.2);">
+                    <div class="card-label" style="color: var(--gold-light);">Domingo • 08/02 à noite</div>
+                    <h3 style="color: var(--white);">Aula Final ao Vivo — Oferta Exclusiva</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Quem estiver ao vivo no domingo à noite receberá uma oferta
+                        exclusiva com bônus especiais que não se repetirão mais. É a sua melhor oportunidade de entrar
+                        com todas as vantagens.</p>
+                </div>
+                <div class="news-card animate-in" style="background: var(--white); border: 1px solid var(--border);">
+                    <div class="card-label" style="color: var(--navy);">Segunda-feira • 09/02 às 7h</div>
+                    <h3>Abertura Oficial das Inscrições</h3>
+                    <p>As inscrições serão abertas oficialmente na segunda-feira. Porém, os bônus exclusivos do domingo
+                        já terão encerrado. O desconto de R$ 1.000 é válido até segunda às 23:59.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GRUPO VIP ============ -->
+    <section class="vip-section" id="grupo-vip">
+        <div class="container">
+            <div class="vip-card animate-in">
+                <span class="section-label" style="color: var(--gold-light);">Grupo VIP</span>
+                <h2>Quer receber tudo em<br><span class="gold">primeira mão?</span></h2>
+                <p class="mt-2">
+                    Entre no <strong>Grupo VIP do evento</strong>. Você vai receber o link oficial de inscrição com
+                    prioridade, os detalhes da oferta exclusiva de domingo e acesso antecipado às informações.
+                </p>
+                <p class="mt-2">
+                    <strong>Sem spam. Sem enrolação.</strong><br>
+                    Apenas o essencial, direto no seu WhatsApp.<br>
+                    E nós vamos tratar você como prioridade.
+                </p>
+                <div class="mt-4">
+                    <a href="https://sndflw.com/i/CWjndVtJfZsAK0e1oCcY" target="_blank" class="cta-btn cta-gold"
+                        style="font-size: 18px; padding: 20px 48px;">
+                        Entrar no Grupo VIP →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CLOSING ============ -->
+    <section class="closing">
+        <div class="container">
+            <p class="closing-quote animate-in">
+                "Quem não decide evoluir,<br>decide repetir."
+            </p>
+            <p class="closing-author animate-in">Te vejo no domingo.</p>
+            <p class="closing-name animate-in">Dr. Márcio Foletto</p>
+            <div class="mt-4 animate-in">
+                <a href="https://sndflw.com/i/CWjndVtJfZsAK0e1oCcY" target="_blank" class="cta-btn cta-gold">Entrar no
+                    Grupo VIP →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FLOATING CTA ============ -->
+    <div class="floating-cta" id="floatingCta">
+        <span class="float-text">Garanta seus bônus exclusivos</span>
+        <a href="https://sndflw.com/i/CWjndVtJfZsAK0e1oCcY" target="_blank" class="cta-btn cta-gold">Grupo VIP →</a>
+    </div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+        // Floating CTA
+        const floatingCta = document.getElementById('floatingCta');
+        const heroSection = document.querySelector('.hero');
+        const vipSection = document.getElementById('grupo-vip');
+
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+            const vipTop = vipSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (heroBottom < 0 && vipTop > windowHeight) {
+                floatingCta.classList.add('visible');
+            } else {
+                floatingCta.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
