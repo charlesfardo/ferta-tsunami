@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola do Implantodontista — Método 4.0 | Pré-Abertura</title>
+    <meta name="description"
+        content="Tudo que você precisa saber antes de se inscrever no Método 4.0 da Escola do Implantodontista.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:        #0A0D0C;
+            --bg-2:      #0F1413;
+            --surface:   #141B19;
+            --surface-2: #1A2320;
+            --line-dark: rgba(255,255,255,0.09);
+            --line-dark-2: rgba(255,255,255,0.14);
+
+            --paper:     #F3F6F4;
+            --paper-2:   #FFFFFF;
+            --ink:       #0A0D0C;
+            --ink-2:     #2B302E;
+            --ink-muted: #5E6864;
+            --line:      #E2E7E4;
+
+            --green:     #1EE17F;
+            --green-2:   #14C56C;
+            --green-deep:#0B4F31;
+            --green-ink: #042214;
+            --green-soft:rgba(30,225,127,0.14);
+
+            --coral:     #FF6A45;
+            --coral-2:   #FF855F;
+            --coral-soft:rgba(255,106,69,0.14);
+
+            --txt-dark:  #EAF0EC;
+            --txt-dark-mut: rgba(234,240,236,0.62);
+            --txt-dark-faint: rgba(234,240,236,0.42);
+
+            --r:   16px;
+            --r-lg:24px;
+            --r-xl:32px;
+
+            --fd: 'Bricolage Grotesque', system-ui, sans-serif;
+            --fb: 'Hanken Grotesk', system-ui, sans-serif;
+
+            --shadow-card: 0 1px 0 rgba(255,255,255,0.04) inset, 0 24px 50px -24px rgba(0,0,0,0.7);
+            --glow-green: 0 6px 26px -10px rgba(30,225,127,0.34);
+            --maxw: 1120px;
+        }
+
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--fb);
+            background: var(--bg);
+            color: var(--txt-dark);
+            line-height: 1.62;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+        .narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+        h1,h2,h3,h4 { font-family: var(--fd); font-weight: 700; line-height: 1.04; letter-spacing: -0.02em; }
+
+        /* progress */
+        .progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--green), var(--green-2)); z-index: 300; box-shadow: 0 0 12px rgba(30,225,127,0.6); }
+
+        /* ====== HEADER ====== */
+        .nav {
+            position: sticky; top: 0; z-index: 200;
+            background: rgba(10,13,12,0.72);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line-dark);
+        }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-family: var(--fd); font-weight: 700; font-size: 17px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+        .logo .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); }
+        .logo span { color: var(--txt-dark-mut); font-weight: 500; }
+        .nav-cta {
+            font-family: var(--fb); font-weight: 700; font-size: 13.5px;
+            background: var(--green); color: var(--green-ink);
+            padding: 10px 20px; border-radius: 100px; transition: transform .25s, box-shadow .25s;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--glow-green); }
+        @media (max-width: 540px){ .logo span{ display:none; } }
+
+        /* ====== BUTTONS ====== */
+        .btn {
+            display: inline-flex; align-items: center; gap: 11px;
+            font-family: var(--fb); font-weight: 700; font-size: 15.5px;
+            padding: 16px 30px; border-radius: 100px; cursor: pointer; border: none;
+            transition: transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s;
+            position: relative;
+        }
+        .btn-green { background: var(--green); color: var(--green-ink); box-shadow: var(--glow-green); }
+        .btn-green:hover { transform: translateY(-2px) scale(1.005); box-shadow: 0 10px 34px -10px rgba(30,225,127,0.5); }
+        .btn-green .arr { transition: transform .3s; }
+        .btn-green:hover .arr { transform: translateX(5px); }
+        .btn-dark { background: var(--ink); color: var(--paper-2); }
+        .btn-dark:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -12px rgba(0,0,0,0.5); }
+        .btn-lg { font-size: 16.5px; padding: 18px 36px; }
+        .btn-block { width: 100%; justify-content: center; }
+
+        /* ====== SECTION BASICS ====== */
+        section { padding: 84px 0; position: relative; }
+        @media (max-width: 720px){ section { padding: 58px 0; } }
+        .sec-light { background: var(--paper); color: var(--ink); }
+        .sec-dark { background: var(--bg); color: var(--txt-dark); }
+        .sec-dark-2 { background: var(--bg-2); color: var(--txt-dark); }
+
+        .kicker {
+            display: inline-flex; align-items: center; gap: 9px;
+            font-family: var(--fb); font-weight: 700; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--green-2); margin-bottom: 18px;
+        }
+        .sec-dark .kicker { color: var(--green); }
+        .kicker .bar { width: 26px; height: 2px; background: currentColor; border-radius: 2px; }
+        .kicker.coral { color: var(--coral); }
+
+        .h-sec { font-size: clamp(27px, 3.4vw, 40px); margin-bottom: 18px; }
+        .h-sec .hl { color: var(--green-2); }
+        .sec-dark .h-sec .hl { color: var(--green); }
+        .h-sec .coral { color: var(--coral); }
+        .sub { font-size: clamp(16px,1.5vw,18px); color: var(--ink-muted); max-width: 60ch; line-height: 1.55; }
+        .sec-dark .sub { color: var(--txt-dark-mut); }
+        .center { text-align: center; }
+        .center .sub { margin-left: auto; margin-right: auto; }
+
+        /* ====== HERO ====== */
+        .hero { background: var(--bg); padding: 76px 0 86px; position: relative; overflow: hidden; }
+        .hero::before {
+            content:''; position: absolute; inset: 0; pointer-events: none;
+            background:
+              radial-gradient(60% 55% at 78% 8%, rgba(30,225,127,0.18), transparent 60%),
+              radial-gradient(50% 50% at 8% 90%, rgba(30,225,127,0.08), transparent 60%);
+            animation: drift 14s ease-in-out infinite alternate;
+        }
+        @keyframes drift { from{ transform: translate3d(0,0,0) } to{ transform: translate3d(-30px,20px,0) } }
+        .hero .wrap { position: relative; z-index: 2; }
+        .pill {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: rgba(30,225,127,0.1); border: 1px solid rgba(30,225,127,0.3);
+            color: var(--green); padding: 8px 16px 8px 12px; border-radius: 100px;
+            font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px;
+        }
+        .pill .live { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(30,225,127,0.6); animation: ping 1.8s infinite; }
+        @keyframes ping { 0%{ box-shadow: 0 0 0 0 rgba(30,225,127,0.55);} 70%{ box-shadow: 0 0 0 9px rgba(30,225,127,0);} 100%{ box-shadow: 0 0 0 0 rgba(30,225,127,0);} }
+
+        .hero h1 { font-size: clamp(33px, 4.4vw, 56px); font-weight: 700; max-width: 18ch; margin-bottom: 20px; }
+        .hero h1 .hl { position: relative; color: var(--green); white-space: nowrap; }
+        .hero p.lead { font-size: clamp(16px, 1.4vw, 18px); color: var(--txt-dark-mut); max-width: 52ch; margin-bottom: 32px; }
+        .hero-cta { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 14px; }
+        .hero-cta .note { font-size: 13.5px; color: var(--txt-dark-faint); }
+
+        .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; max-width: 640px; }
+        .stat {
+            background: var(--surface); border: 1px solid var(--line-dark);
+            border-radius: var(--r-lg); padding: 20px 22px;
+            position: relative; overflow: hidden;
+        }
+        .stat::after { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: var(--green); }
+        .stat .num { font-family: var(--fd); font-weight: 700; font-size: clamp(27px,3vw,38px); line-height: 1; color: var(--txt-dark); letter-spacing: -0.03em; }
+        .stat .lbl { font-size: 13px; color: var(--txt-dark-mut); font-weight: 600; margin-top: 10px; letter-spacing: .3px; }
+        @media (max-width: 600px){ .stats{ grid-template-columns: 1fr; max-width: 380px; } .stat{ display:flex; align-items:baseline; gap:16px; } .stat .lbl{ margin-top:0; } }
+
+        /* ====== PLATE (congresso) ====== */
+        .plate { position: relative; background: var(--bg); }
+        .plate-media { position: relative; max-height: 520px; overflow: hidden; }
+        .plate-media img { width: 100%; display: block; object-fit: cover; max-height: 520px; }
+        .plate-media::after { content:''; position:absolute; inset:0; background: linear-gradient(to top, var(--bg) 4%, rgba(10,13,12,0.35) 45%, rgba(10,13,12,0.55) 100%); }
+        .plate-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding-bottom: 42px; }
+        .plate-cap .tag { display:inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
+        .plate-cap h3 { font-size: clamp(25px, 3.2vw, 40px); font-weight: 700; max-width: 18ch; margin-bottom: 12px; }
+        .plate-cap p { color: var(--txt-dark-mut); max-width: 62ch; font-size: 16px; }
+
+        /* ====== TWO NEWS ====== */
+        .news { display: grid; gap: 22px; margin-top: 12px; }
+        @media (min-width: 820px){ .news { grid-template-columns: 1fr 1fr; } }
+        .ncard { border-radius: var(--r-xl); padding: 32px 30px; border: 1.5px solid; position: relative; overflow: hidden; }
+        .ncard.good { background: linear-gradient(180deg, #ECFBF2, #FFFFFF); border-color: #BFEDD2; }
+        .ncard.bad  { background: linear-gradient(180deg, #FFF1 EC, #FFFFFF); border-color: #FFD4C6; }
+        .ncard.bad  { background: linear-gradient(180deg, #FFF1EC, #FFFFFF); }
+        .ntag { display:inline-flex; align-items:center; gap:9px; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
+        .ncard.good .ntag { color: var(--green-2); }
+        .ncard.bad .ntag { color: var(--coral); }
+        .ntag .ic { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; color: #fff; font-size: 15px; }
+        .ncard.good .ntag .ic { background: var(--green-2); }
+        .ncard.bad .ntag .ic { background: var(--coral); }
+        .ncard h3 { font-size: 21px; color: var(--ink); margin-bottom: 12px; }
+        .ncard p { color: var(--ink-muted); font-size: 16.5px; }
+        .ncard p strong { color: var(--ink-2); }
+
+        /* ====== METHOD ====== */
+        .method-grid { display: grid; gap: 40px; align-items: start; margin-top: 12px; }
+        @media (min-width: 900px){ .method-grid { grid-template-columns: 1.05fr 1fr; gap: 52px; } }
+        .method-copy p { color: var(--txt-dark-mut); margin-bottom: 18px; font-size: 17px; }
+        .method-copy p strong { color: var(--txt-dark); }
+        .feat { display: grid; gap: 12px; }
+        .frow { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--line-dark); border-radius: var(--r); padding: 16px 20px; transition: border-color .25s, transform .25s; }
+        .frow:hover { border-color: rgba(30,225,127,0.4); transform: translateX(4px); }
+        .frow .fic { width: 38px; height: 38px; flex-shrink: 0; border-radius: 11px; background: var(--green-soft); color: var(--green); display: grid; place-items: center; }
+        .frow .fic svg { width: 18px; height: 18px; }
+        .frow .ftxt b { display: block; font-size: 16px; color: var(--txt-dark); font-weight: 700; }
+        .frow .ftxt span { font-size: 14.5px; color: var(--txt-dark-mut); }
+
+        /* ====== BONUS ====== */
+        .bonus-grid { display: grid; gap: 20px; margin-top: 12px; }
+        @media (min-width: 760px){ .bonus-grid { grid-template-columns: 1fr 1fr; } }
+        .bcard {
+            background: var(--paper-2); border: 1.5px solid var(--line); border-radius: var(--r-lg);
+            padding: 26px 26px; position: relative; transition: transform .3s, box-shadow .3s, border-color .3s;
+            display: flex; flex-direction: column;
+        }
+        .bcard:hover { transform: translateY(-5px); box-shadow: 0 26px 50px -22px rgba(10,13,12,0.28); }
+        .bcard.excl { border-color: rgba(255,106,69,0.5); box-shadow: 0 0 0 1px rgba(255,106,69,0.18); }
+        .bcard.excl:hover { box-shadow: 0 26px 50px -22px rgba(255,106,69,0.35); }
+        .bcard-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+        .bnum { font-family: var(--fd); font-weight: 700; font-size: 25px; line-height: 1; color: var(--green-2); letter-spacing: -0.03em; }
+        .bcard.excl .bnum { color: var(--coral); }
+        .chip { font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 6px 12px; border-radius: 100px; white-space: nowrap; }
+        .chip.excl { background: var(--coral-soft); color: var(--coral); }
+        .chip.both { background: var(--green-soft); color: var(--green-2); }
+        .bcard h4 { font-size: 18px; color: var(--ink); margin-bottom: 10px; }
+        .bcard > p { color: var(--ink-muted); font-size: 15.5px; margin-bottom: 18px; flex: 1; }
+        .avail { font-size: 13.5px; font-weight: 600; line-height: 1.55; padding: 13px 16px; border-radius: 12px; }
+        .avail.excl { background: var(--coral-soft); color: #B23A1F; }
+        .avail.both { background: var(--green-soft); color: var(--green-deep); }
+        .avail .dom { color: var(--green-deep); font-weight: 800; }
+        .avail .seg { color: #B23A1F; font-weight: 800; }
+
+        /* ====== TABLE ====== */
+        .tbl-wrap { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line-dark); margin-top: 12px; background: var(--surface); }
+        table.cmp { width: 100%; border-collapse: collapse; font-size: 16px; }
+        .cmp th, .cmp td { padding: 16px 14px; text-align: center; border-bottom: 1px solid var(--line-dark); }
+        .cmp thead th { font-family: var(--fd); font-weight: 700; font-size: 14px; letter-spacing: .3px; background: var(--bg-2); }
+        .cmp thead th.dom { color: var(--green); position: relative; }
+        .cmp thead th.dom::after { content:'RECOMENDADO'; display:block; font-family: var(--fb); font-size: 9.5px; letter-spacing: 1px; color: var(--green-ink); background: var(--green); padding: 2px 8px; border-radius: 100px; margin: 6px auto 0; width: max-content; }
+        .cmp th:first-child, .cmp td:first-child { text-align: left; font-weight: 600; color: var(--txt-dark); padding-left: 22px; }
+        .cmp tbody td { color: var(--txt-dark-mut); }
+        .cmp tbody tr:last-child td { border-bottom: none; }
+        .cmp tbody td.dom { background: rgba(30,225,127,0.07); color: var(--txt-dark); font-weight: 600; }
+        .cmp .yes { color: var(--green); font-weight: 700; }
+        .cmp .no { color: var(--coral); }
+        .cmp .wait { color: var(--txt-dark-faint); font-size: 14px; }
+        @media (max-width: 600px){ .cmp{ font-size: 13px; } .cmp th, .cmp td{ padding: 12px 8px; } .cmp th:first-child, .cmp td:first-child{ padding-left: 14px; } }
+
+        /* ====== GUARANTEE ====== */
+        .guar-grid { display: grid; gap: 22px; margin-top: 12px; }
+        @media (min-width: 760px){ .guar-grid { grid-template-columns: 1fr 1fr; } }
+        .gcard { border-radius: var(--r-xl); padding: 32px 30px; border: 1.5px solid; }
+        .gcard.g1 { background: var(--bg-2); border-color: rgba(30,225,127,0.3); }
+        .gcard.g2 { background: var(--bg-2); border-color: var(--line-dark-2); }
+        .gicon { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 18px; }
+        .gicon svg { width: 22px; height: 22px; }
+        .gcard.g1 .gicon { background: var(--green-soft); color: var(--green); }
+        .gcard.g2 .gicon { background: rgba(255,255,255,0.07); color: var(--txt-dark); }
+        .gcard .gnum { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--txt-dark-faint); margin-bottom: 10px; }
+        .gcard h3 { font-size: 21px; margin-bottom: 13px; }
+        .gcard p { color: var(--txt-dark-mut); font-size: 16px; margin-bottom: 22px; }
+        .gseal { font-family: var(--fd); font-weight: 700; font-size: 17.5px; padding: 14px 18px; border-radius: 14px; }
+        .g1 .gseal { background: var(--green); color: var(--green-ink); }
+        .g2 .gseal { background: rgba(255,255,255,0.08); color: var(--txt-dark); border: 1px solid var(--line-dark-2); }
+        .guar-foot { text-align: center; margin-top: 44px; }
+        .guar-foot b { font-family: var(--fd); font-size: clamp(22px,3vw,30px); display: block; margin-bottom: 12px; }
+        .guar-foot span { color: var(--txt-dark-mut); }
+
+        /* ====== ALERT ====== */
+        .alert { background: linear-gradient(180deg, #2a1109, var(--bg-2)); border: 1.5px solid rgba(255,106,69,0.4); border-radius: var(--r-xl); padding: 36px 32px; }
+        .alert .atop { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+        .alert .aic { width: 40px; height: 40px; border-radius: 11px; background: var(--coral); color: #fff; display: grid; place-items: center; font-size: 20px; font-weight: 800; flex-shrink: 0; }
+        .alert h3 { font-size: 22px; color: var(--coral-2); }
+        .alert > p { color: var(--txt-dark-mut); max-width: 64ch; font-size: 16.5px; }
+        .alert > p strong { color: var(--coral-2); }
+        .arules { margin-top: 26px; display: grid; gap: 12px; }
+        .arule { display: flex; gap: 14px; align-items: center; background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark); border-radius: 14px; padding: 15px 18px; font-size: 15.5px; font-weight: 600; }
+        .arule .rn { width: 28px; height: 28px; border-radius: 50%; background: var(--coral); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 13px; flex-shrink: 0; }
+
+        /* ====== TIMELINE ====== */
+        .tl { display: grid; gap: 20px; margin-top: 12px; }
+        @media (min-width: 820px){ .tl { grid-template-columns: 1fr 1fr; } }
+        .tcard { border-radius: var(--r-xl); padding: 32px 30px; border: 1.5px solid; position: relative; }
+        .tcard.key { background: linear-gradient(165deg, rgba(30,225,127,0.16), var(--surface)); border-color: rgba(30,225,127,0.45); }
+        .tcard.reg { background: var(--surface); border-color: var(--line-dark-2); }
+        .twhen { display:inline-flex; align-items:center; gap:9px; font-weight: 800; font-size: 13px; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 16px; }
+        .tcard.key .twhen { color: var(--green); }
+        .tcard.reg .twhen { color: var(--txt-dark-mut); }
+        .twhen .d { width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+        .tcard h3 { font-size: clamp(20px,2.2vw,24px); margin-bottom: 13px; }
+        .tcard p { color: var(--txt-dark-mut); font-size: 16px; }
+        .tnote { display:inline-block; margin-top: 18px; background: var(--coral-soft); color: var(--coral-2); font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 100px; }
+
+        /* ====== VIP (full green block) ====== */
+        .vip { background: var(--green); color: var(--green-ink); position: relative; overflow: hidden; }
+        .vip::before { content:''; position:absolute; inset:0; background: radial-gradient(60% 80% at 85% 10%, rgba(255,255,255,0.4), transparent 55%); pointer-events:none; }
+        .vip .wrap { position: relative; z-index: 2; }
+        .vip .kicker { color: var(--green-deep); }
+        .vip h2 { font-size: clamp(29px,4vw,46px); font-weight: 700; color: var(--green-ink); max-width: 16ch; margin-bottom: 18px; }
+        .vip p { color: rgba(4,34,20,0.78); font-size: 17px; max-width: 54ch; margin-bottom: 14px; }
+        .vip p strong { color: var(--green-ink); }
+        .vip .btn-dark { box-shadow: 0 18px 44px -14px rgba(0,0,0,0.55); }
+        .vip .vmeta { font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--green-deep); margin-top: 18px; }
+
+        /* ====== CLOSING ====== */
+        .closing { background: var(--bg); text-align: center; padding: 88px 0; }
+        .closing .q { font-family: var(--fd); font-weight: 700; font-size: clamp(26px,3.6vw,42px); max-width: 18ch; margin: 0 auto 30px; line-height: 1.1; }
+        .closing .q em { color: var(--green); font-style: normal; }
+        .closing .sline { width: 54px; height: 3px; border-radius: 3px; background: var(--green); margin: 0 auto 26px; }
+        .closing .by { color: var(--txt-dark-mut); font-size: 18px; }
+        .closing .name { font-family: var(--fd); font-weight: 700; font-size: 22px; margin-top: 4px; }
+        .closing .role { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--txt-dark-faint); margin-top: 8px; }
+
+        /* ====== FOOTER ====== */
+        .foot { background: var(--bg); border-top: 1px solid var(--line-dark); padding: 26px 0 90px; }
+        .foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px; color: var(--txt-dark-faint); }
+
+        /* ====== FLOATING ====== */
+        .float { position: fixed; left: 0; right: 0; bottom: 0; z-index: 250; background: rgba(10,13,12,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line-dark-2); transform: translateY(120%); transition: transform .45s cubic-bezier(.2,.7,.3,1); }
+        .float.on { transform: translateY(0); }
+        .float .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 13px; padding-bottom: 13px; }
+        .float .ft { font-weight: 700; font-size: 14.5px; color: var(--txt-dark); display: none; }
+        .float .ft span { color: var(--txt-dark-mut); font-weight: 500; display: block; font-size: 12.5px; }
+        @media (min-width: 620px){ .float .ft { display: block; } }
+        .float .btn { padding: 13px 26px; font-size: 15px; }
+
+        /* ====== REVEAL ====== */
+        .rv { opacity: 0; transform: translateY(28px); transition: opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1); }
+        .rv.in { opacity: 1; transform: none; }
+        .rv[data-d="1"]{ transition-delay: .08s; } .rv[data-d="2"]{ transition-delay: .16s; }
+        .rv[data-d="3"]{ transition-delay: .24s; } .rv[data-d="4"]{ transition-delay: .32s; }
+        .rv[data-d="5"]{ transition-delay: .40s; } .rv[data-d="6"]{ transition-delay: .48s; }
+        @media (prefers-reduced-motion: reduce){ *{ animation:none!important; transition:none!important;} .rv{ opacity:1; transform:none; } }
+    </style>
+</head>
+
+<body>
+    <div class="progress" id="progress"></div>
+
+    <!-- ====== NAV ====== -->
+    <header class="nav">
+        <div class="wrap">
+            <a class="logo" href="#top"><span class="dot"></span>Escola do Implantodontista <span>· Método 4.0</span></a>
+            <a class="nav-cta" href="https://sndflw.com/i/YvpQ1PhYZDiK2udj3ak9" target="_blank" rel="noopener">Entrar no Grupo VIP</a>
+        </div>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="top">
+        <div class="wrap">
+            <span class="pill rv"><span class="live"></span> Evento · O Novo Plano da Implantodontia</span>
+            <h1 class="rv" data-d="1">Tudo que você precisa saber antes de entrar no <span class="hl">Método 4.0</span></h1>
+            <p class="lead rv" data-d="2">Leia esta página com atenção. Aqui está cada detalhe da formação, os bônus exclusivos, as garantias e exatamente como garantir sua vaga.</p>
+            <div class="hero-cta rv" data-d="3">
+                <a class="btn btn-green btn-lg" href="https://sndflw.com/i/YvpQ1PhYZDiK2udj3ak9" target="_blank" rel="noopener">Quero entrar no Grupo VIP <span class="arr">→</span></a>
+                <span class="note">Acesso prioritário · link oficial · direto no WhatsApp</span>
+            </div>
+
+            <div class="stats rv" data-d="4">
+                <div class="stat"><div class="num" data-count="2500" data-prefix="+">+0</div><div class="lbl">Alunos formados</div></div>
+                <div class="stat"><div class="num" data-count="45" data-prefix="+">+0</div><div class="lbl">Turmas realizadas</div></div>
+                <div class="stat"><div class="num" data-count="97" data-suffix="%">0%</div><div class="lbl">De satisfação</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PLATE ====== -->
+    <div class="plate">
+        <div class="plate-media rv">
+            <img src="./congresso-2025.jpg" alt="Alunos da Escola do Implantodontista no palco do Congresso 2025">
+        </div>
+        <div class="plate-cap">
+            <div class="wrap">
+                <span class="tag rv">Imersão Implanto Revolution 4.0 · Congresso 2025</span>
+                <h3 class="rv" data-d="1">Eles subiram no palco. Agora é a sua vez.</h3>
+                <p class="rv" data-d="2">Alunos reconhecidos no maior evento de Implantodontia 4.0 — o encontro anual da Escola do Implantodontista, onde celebramos os cirurgiões que dominaram o método e hoje são referência em suas cidades e regiões.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== §1 NOTÍCIAS ====== -->
+    <section class="sec-light">
+        <div class="wrap center">
+            <span class="kicker rv"><span class="bar"></span> Antes de tudo</span>
+            <h2 class="h-sec rv" data-d="1">Tenho uma boa notícia<br>e uma <span class="coral">má notícia</span>.</h2>
+        </div>
+        <div class="wrap">
+            <div class="news">
+                <div class="ncard good rv" data-d="1">
+                    <span class="ntag"><span class="ic">✓</span> A boa notícia</span>
+                    <h3>A Escola do Implantodontista vai abrir novas vagas.</h3>
+                    <p>Se você acompanhou as aulas do evento <em>O Novo Plano da Implantodontia</em>, já entendeu que existe um método comprovado para dominar a carga imediata — mesmo em casos atróficos, sem depender de enxertos, com previsibilidade e segurança. Agora você terá a chance de acessar esse método completo.</p>
+                </div>
+                <div class="ncard bad rv" data-d="2">
+                    <span class="ntag"><span class="ic">!</span> A má notícia</span>
+                    <h3>Nem todos vão conseguir entrar.</h3>
+                    <p>No domingo teremos a <strong>aula mais importante</strong> do evento, onde todas as peças se encaixam e revelamos o caminho mais prático para resolver casos atróficos com carga imediata. Como bônus, apresentaremos uma oferta exclusiva com vantagens que <strong>não se repetirão</strong> para quem estiver ao vivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §2 MÉTODO ====== -->
+    <section class="sec-dark">
+        <div class="wrap">
+            <span class="kicker rv"><span class="bar"></span> A formação</span>
+            <h2 class="h-sec rv" data-d="1">O que é o <span class="hl">Método 4.0</span></h2>
+            <p class="sub rv" data-d="1">A formação online mais completa do Brasil em carga imediata — com mentoria, prática supervisionada e acompanhamento individualizado.</p>
+
+            <div class="method-grid" style="margin-top:48px;">
+                <div class="method-copy rv" data-d="1">
+                    <p>O Método 4.0 é o sistema que o <strong>Dr. Márcio Foletto</strong> desenvolveu em mais de 15 anos de prática clínica e mais de 3.000 reabilitações totais.</p>
+                    <p>Ele reúne as técnicas mais avançadas da implantodontia — All-on-4, Pterigoide, Zigomático, Transnasal, Transinusal, Vomer e combinações híbridas — em um único método estruturado, com protocolos claros do planejamento à finalização.</p>
+                </div>
+                <div class="feat rv" data-d="2">
+                    <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><div class="ftxt"><b>6 módulos completos</b><span>Do fundamento à execução avançada</span></div></div>
+                    <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4" fill="currentColor" stroke="none"/></svg></div><div class="ftxt"><b>Hands-on ao vivo</b><span>Sessões práticas com mentores</span></div></div>
+                    <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.35 9 9 0 0 1-3.7-.74L3 21l1.9-5.3A8.38 8.38 0 0 1 12 3.5a8.5 8.5 0 0 1 9 8z"/></svg></div><div class="ftxt"><b>Consultorias individuais</b><span>Para seus casos clínicos reais</span></div></div>
+                    <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="ftxt"><b>Comunidade de cirurgiões</b><span>Uma rede no mesmo caminho</span></div></div>
+                    <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div class="ftxt"><b>12 meses de acesso</b><span>Conteúdo completo liberado</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §3 BÔNUS ====== -->
+    <section class="sec-light">
+        <div class="wrap center">
+            <span class="kicker rv"><span class="bar"></span> Além do método</span>
+            <h2 class="h-sec rv" data-d="1">O que você recebe <span class="hl">além</span> do método</h2>
+            <p class="sub rv" data-d="1">Cada bônus foi pensado para acelerar sua implementação. Atenção: alguns são exclusivos para quem agir primeiro.</p>
+        </div>
+        <div class="wrap">
+            <div class="bonus-grid">
+                <div class="bcard excl rv" data-d="1">
+                    <div class="bcard-top"><span class="bnum">01</span><span class="chip excl">3 primeiros</span></div>
+                    <h4>Acesso VIP aos Bastidores</h4>
+                    <p>Acompanhe de perto como o Dr. Márcio e sua equipe organizam, planejam e executam os casos com os alunos avançados. Um acesso que não está à venda em lugar nenhum.</p>
+                    <div class="avail excl">Apenas 3 vagas — exclusivo para os 3 primeiros inscritos do domingo.</div>
+                </div>
+                <div class="bcard excl rv" data-d="2">
+                    <div class="bcard-top"><span class="bnum">02</span><span class="chip excl">Vantagem domingo</span></div>
+                    <h4>Macro Modelo Realístico — na sua casa</h4>
+                    <p>Um modelo anatômico realístico para treinar durante as sessões de Hands-on ao vivo. Com supervisão dos mentores, você pratica em casa antes de ir para o paciente.</p>
+                    <div class="avail excl"><span class="dom">Domingo:</span> todos os inscritos com residência no Brasil recebem 100% grátis. <span class="seg">Segunda:</span> apenas os 10 primeiros.</div>
+                </div>
+                <div class="bcard rv" data-d="1">
+                    <div class="bcard-top"><span class="bnum">03</span><span class="chip both">Dom + Seg</span></div>
+                    <h4>Treinamento de Vendas na Implantodontia</h4>
+                    <p>Treinamento completo para triplicar seus fechamentos de protocolo: como apresentar, precificar e converter o paciente. Saber operar é metade — saber vender o tratamento é a outra.</p>
+                    <div class="avail both">Disponível para inscritos de domingo e segunda.</div>
+                </div>
+                <div class="bcard excl rv" data-d="2">
+                    <div class="bcard-top"><span class="bnum">04</span><span class="chip excl">Exclusivo domingo</span></div>
+                    <h4>Template Pessoal de Vendas do Dr. Márcio</h4>
+                    <p>A apresentação que o Dr. Márcio usa no consultório para vender protocolos de alto valor. Pronta para usar — só inserir seus dados e apresentar ao paciente.</p>
+                    <div class="avail excl">Exclusivo para quem se inscrever no domingo — não estará disponível na segunda.</div>
+                </div>
+                <div class="bcard rv" data-d="1">
+                    <div class="bcard-top"><span class="bnum">05</span><span class="chip both">Dom + Seg</span></div>
+                    <h4>MasterClass ao Vivo</h4>
+                    <p>Sessões ao vivo com o Dr. Márcio para tirar dúvidas, simular casos clínicos e evitar as complicações mais comuns. O aprendizado que não cabe em vídeo gravado.</p>
+                    <div class="avail both">Disponível para inscritos de domingo e segunda.</div>
+                </div>
+                <div class="bcard excl rv" data-d="2">
+                    <div class="bcard-top"><span class="bnum">06</span><span class="chip excl">Exclusivo domingo</span></div>
+                    <h4>Prioridade na Mentoria com Dr. Márcio</h4>
+                    <p>Quem se inscrever no domingo terá prioridade direta nas sessões de mentoria. Seus casos serão analisados primeiro. Sua evolução será acompanhada de perto.</p>
+                    <div class="avail excl">Exclusivo para quem se inscrever no domingo — na segunda, sem prioridade.</div>
+                </div>
+                <div class="bcard rv" data-d="1">
+                    <div class="bcard-top"><span class="bnum">07</span><span class="chip both">Dom + Seg</span></div>
+                    <h4>Cashback Jornada Completa</h4>
+                    <p>Quando você decidir evoluir para a Experiência Presencial 4.0, o valor investido na Escola volta integralmente como crédito. É como se a Escola fosse gratuita quando você completa a jornada.</p>
+                    <div class="avail both">Disponível para todos — válido por 24 meses.</div>
+                </div>
+                <div class="bcard excl rv" data-d="2">
+                    <div class="bcard-top"><span class="bnum">08</span><span class="chip excl">Exclusivo domingo</span></div>
+                    <h4>Acesso Antecipado</h4>
+                    <p>Quem se inscrever no domingo não precisa esperar segunda. Seu acesso é liberado na hora. Você sai da aula e já pode começar a estudar.</p>
+                    <div class="avail excl">Exclusivo domingo — quem entra segunda recebe o acesso junto com todos.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §4 TABELA ====== -->
+    <section class="sec-dark">
+        <div class="wrap center">
+            <span class="kicker rv"><span class="bar"></span> Visão geral</span>
+            <h2 class="h-sec rv" data-d="1">Domingo <span class="hl">vs</span> Segunda</h2>
+            <p class="sub rv" data-d="1">Exatamente o que muda dependendo de quando você se inscreve.</p>
+        </div>
+        <div class="wrap">
+            <div class="tbl-wrap rv" data-d="2">
+                <table class="cmp">
+                    <thead>
+                        <tr><th>Bônus</th><th class="dom">Domingo · 21/06</th><th>Segunda · 22/06</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Acesso VIP Bastidores</td><td class="dom">3 primeiros</td><td>3 primeiros</td></tr>
+                        <tr><td>Macro Modelo Realístico</td><td class="dom yes">Todos ✓</td><td class="wait">10 primeiros</td></tr>
+                        <tr><td>Treinamento de Vendas</td><td class="dom yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Template de Vendas Dr. Márcio</td><td class="dom yes">Exclusivo ✓</td><td class="no">✕</td></tr>
+                        <tr><td>MasterClass ao Vivo</td><td class="dom yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Prioridade Mentoria Dr. Márcio</td><td class="dom yes">Exclusivo ✓</td><td class="no">✕</td></tr>
+                        <tr><td>Cashback Jornada Completa</td><td class="dom yes">Integral ✓</td><td class="yes">Integral ✓</td></tr>
+                        <tr><td>Acesso Antecipado</td><td class="dom yes">Na hora ✓</td><td class="wait">Na segunda</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §5 GARANTIA ====== -->
+    <section class="sec-dark-2">
+        <div class="wrap center">
+            <span class="kicker rv"><span class="bar"></span> Garantia</span>
+            <h2 class="h-sec rv" data-d="1">O risco é nosso. <span class="hl">O resultado é seu.</span></h2>
+            <p class="sub rv" data-d="1">Não quero que medo ou insegurança impeça você de dar o próximo passo. Por isso, eu vou além.</p>
+        </div>
+        <div class="wrap">
+            <div class="guar-grid">
+                <div class="gcard g1 rv" data-d="1">
+                    <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <div class="gnum">Garantia 01 · Incondicional</div>
+                    <h3>7 dias, sem perguntas</h3>
+                    <p>Acesse o conteúdo, explore a plataforma. Se por qualquer motivo quiser desistir em até 7 dias — sem questionamentos — devolvemos 100% do valor investido.</p>
+                    <div class="gseal">Risco zero.</div>
+                </div>
+                <div class="gcard g2 rv" data-d="2">
+                    <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg></div>
+                    <div class="gnum">Garantia 02 · Condicional</div>
+                    <h3>Resultado garantido</h3>
+                    <p>Siga o método, participe do Hands-on, execute o planejamento e solicite consultoria. Se mesmo assim não conseguir resolver 1 caso que justifique o investimento…</p>
+                    <div class="gseal">100% de volta + R$ 1.000 do nosso bolso.</div>
+                </div>
+            </div>
+            <div class="guar-foot rv" data-d="2">
+                <b>A única forma de perder é não tentar.</b>
+                <span>Se o método não funcionar para você — e você seguir o processo — nós pagamos para você ter tentado.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §6 ALERTA ====== -->
+    <section class="sec-dark">
+        <div class="wrap">
+            <div class="alert rv">
+                <div class="atop"><span class="aic">!</span><h3>Cuidado com golpistas</h3></div>
+                <p>Em todo lançamento, golpistas enviam links falsos, ofertas absurdas e promoções inexistentes. Eles podem dizer que o Dr. Márcio liberou uma oferta com 80% de desconto. <strong>Tudo isso é golpe.</strong></p>
+                <div class="arules">
+                    <div class="arule"><span class="rn">1</span> O ÚNICO link oficial de inscrição será enviado pelo Grupo Oficial do evento.</div>
+                    <div class="arule"><span class="rn">2</span> Confie APENAS nos números oficiais da Escola do Implantodontista.</div>
+                    <div class="arule"><span class="rn">3</span> O preço será revelado apenas no domingo (21/06). Qualquer valor antes disso é falso.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §7 CRONOGRAMA ====== -->
+    <section class="sec-dark-2">
+        <div class="wrap center">
+            <span class="kicker rv"><span class="bar"></span> Como funciona</span>
+            <h2 class="h-sec rv" data-d="1">As datas que <span class="hl">decidem</span> tudo</h2>
+        </div>
+        <div class="wrap">
+            <div class="tl">
+                <div class="tcard key rv" data-d="1">
+                    <span class="twhen"><span class="d"></span> Domingo · 21/06 à noite</span>
+                    <h3>A aula mais importante do evento</h3>
+                    <p>É a aula que fecha o ciclo, onde todas as peças se encaixam. Vamos revelar o caminho mais rápido para resolver casos atróficos com carga imediata, incluir um arsenal de técnicas no seu currículo e ter segurança fazendo parte de um grupo seleto com suporte de especialistas. E, como bônus, revelaremos uma oferta exclusiva para quem estiver ao vivo.</p>
+                </div>
+                <div class="tcard reg rv" data-d="2">
+                    <span class="twhen"><span class="d"></span> Segunda-feira · 22/06 às 7h</span>
+                    <h3>Abertura oficial das inscrições</h3>
+                    <p>As inscrições abrem oficialmente na segunda. Porém, os bônus exclusivos do domingo já terão encerrado.</p>
+                    <span class="tnote">Desconto de R$ 1.000 válido até segunda, 23:59</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== §8 VIP ====== -->
+    <section class="vip" id="grupo-vip">
+        <div class="wrap">
+            <span class="kicker rv"><span class="bar"></span> Grupo VIP do evento</span>
+            <h2 class="rv" data-d="1">Quer receber tudo em primeira mão?</h2>
+            <p class="rv" data-d="2">Entre no <strong>Grupo VIP do evento</strong>. Você vai receber o link oficial de inscrição com prioridade, os detalhes da oferta exclusiva de domingo e acesso antecipado às informações.</p>
+            <p class="rv" data-d="2"><strong>Sem spam. Sem enrolação.</strong> Apenas o essencial, direto no seu WhatsApp — e vamos tratar você como prioridade.</p>
+            <div class="rv" data-d="3" style="margin-top:34px;">
+                <a class="btn btn-dark btn-lg" href="https://sndflw.com/i/YvpQ1PhYZDiK2udj3ak9" target="_blank" rel="noopener">Entrar no Grupo VIP <span class="arr">→</span></a>
+                <div class="vmeta">Acesso prioritário · link oficial · WhatsApp</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CLOSING ====== -->
+    <section class="closing">
+        <div class="wrap">
+            <p class="q rv">"Quem não decide evoluir, <em>decide repetir.</em>"</p>
+            <div class="sline rv" data-d="1"></div>
+            <p class="by rv" data-d="1">Te vejo no domingo.</p>
+            <p class="name rv" data-d="1">Dr. Márcio Foletto</p>
+            <p class="role rv" data-d="1">Criador do Método 4.0</p>
+            <div class="rv" data-d="2" style="margin-top:38px;">
+                <a class="btn btn-green btn-lg" href="https://sndflw.com/i/YvpQ1PhYZDiK2udj3ak9" target="_blank" rel="noopener">Entrar no Grupo VIP <span class="arr">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="wrap">
+            <span>Escola do Implantodontista · Método 4.0</span>
+            <span>Página de pré-abertura</span>
+        </div>
+    </footer>
+
+    <!-- ====== FLOATING ====== -->
+    <div class="float" id="float">
+        <div class="wrap">
+            <span class="ft">Garanta seus bônus exclusivos de domingo<span>Acesso prioritário no WhatsApp</span></span>
+            <a class="btn btn-green" href="https://sndflw.com/i/YvpQ1PhYZDiK2udj3ak9" target="_blank" rel="noopener">Grupo VIP <span class="arr">→</span></a>
+        </div>
+    </div>
+
+    <script>
+        // reveal
+        var io = new IntersectionObserver(function(es){
+            es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+        // count-up
+        function fmt(n){ return n.toLocaleString('pt-BR'); }
+        var counted = new WeakSet();
+        var cio = new IntersectionObserver(function(es){
+            es.forEach(function(e){
+                if(!e.isIntersecting || counted.has(e.target)) return;
+                counted.add(e.target);
+                var el = e.target, target = +el.dataset.count, pre = el.dataset.prefix||'', suf = el.dataset.suffix||'';
+                var dur = 1400, t0 = null;
+                function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts-t0)/dur,1); var eased = 1-Math.pow(1-p,3);
+                    el.textContent = pre + fmt(Math.round(target*eased)) + suf; if(p<1) requestAnimationFrame(step); }
+                requestAnimationFrame(step);
+            });
+        }, { threshold: 0.6 });
+        document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+        // progress + floating
+        var progress = document.getElementById('progress'), float = document.getElementById('float');
+        var hero = document.querySelector('.hero'), vip = document.getElementById('grupo-vip');
+        function onScroll(){
+            var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+            progress.style.width = (max>0 ? (h.scrollTop/max*100) : 0) + '%';
+            var hb = hero.getBoundingClientRect().bottom, vt = vip.getBoundingClientRect().top;
+            if(hb < 0 && vt > window.innerHeight) float.classList.add('on'); else float.classList.remove('on');
+        }
+        window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click', function(e){ var t = document.querySelector(this.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); } });
+        });
+    </script>
+</body>
+
+</html>
