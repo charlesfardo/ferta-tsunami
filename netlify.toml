@@ -1,0 +1,7 @@
+# Site estático (HTML puro na raiz do repositório). Sem etapa de build.
+# Versão A  -> index.html      (home: / )
+# Versão B  -> versao-b.html   (/versao-b.html)
+
+[build]
+  publish = "."
+  command = ""
