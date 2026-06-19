@@ -208,8 +208,10 @@
 
         /* ====== METHOD ====== */
         .method-grid { display: grid; gap: 40px; align-items: start; margin-top: 12px; }
-        @media (min-width: 900px){ .method-grid { grid-template-columns: 1.05fr 1fr; gap: 52px; } }
-        .method-copy p { color: var(--txt-dark-mut); margin-bottom: 18px; font-size: 17px; }
+        @media (min-width: 900px){ .method-grid { grid-template-columns: 1.05fr 1fr; gap: 52px; align-items: center; } }
+        .method-copy p { color: var(--txt-dark-mut); margin-bottom: 16px; font-size: 17px; }
+        .method-copy .sub { font-size: clamp(17px,1.6vw,19px); max-width: none; margin: 0 0 24px; color: var(--txt-dark-mut); }
+        .method-copy p:last-child { margin-bottom: 0; }
         .method-copy p strong { color: var(--txt-dark); }
         .feat { display: grid; gap: 12px; }
         .frow { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--line-dark); border-radius: var(--r); padding: 16px 20px; transition: border-color .25s, transform .25s; }
@@ -418,14 +420,13 @@
     <!-- ====== §2 MÉTODO ====== -->
     <section class="sec-dark">
         <div class="wrap">
-            <span class="kicker rv"><span class="bar"></span> A formação</span>
-            <h2 class="h-sec rv" data-d="1">O que é o <span class="hl">Método 4.0</span></h2>
-            <p class="sub rv" data-d="1">A formação online mais completa do Brasil em carga imediata — com mentoria, prática supervisionada e acompanhamento individualizado.</p>
-
-            <div class="method-grid" style="margin-top:48px;">
-                <div class="method-copy rv" data-d="1">
-                    <p>O Método 4.0 é o sistema que o <strong>Dr. Márcio Foletto</strong> desenvolveu em mais de 15 anos de prática clínica e mais de 3.000 reabilitações totais.</p>
-                    <p>Ele reúne as técnicas mais avançadas da implantodontia — All-on-4, Pterigoide, Zigomático, Transnasal, Transinusal, Vomer e combinações híbridas — em um único método estruturado, com protocolos claros do planejamento à finalização.</p>
+            <div class="method-grid">
+                <div class="method-copy">
+                    <span class="kicker rv"><span class="bar"></span> A formação</span>
+                    <h2 class="h-sec rv" data-d="1">O que é o <span class="hl">Método 4.0</span></h2>
+                    <p class="sub rv" data-d="1">A formação online mais completa do Brasil em carga imediata — com mentoria, prática supervisionada e acompanhamento individualizado.</p>
+                    <p class="rv" data-d="1">O Método 4.0 é o sistema que o <strong>Dr. Márcio Foletto</strong> desenvolveu em mais de 15 anos de prática clínica e mais de 3.000 reabilitações totais.</p>
+                    <p class="rv" data-d="1">Ele reúne as técnicas mais avançadas da implantodontia — All-on-4, Pterigoide, Zigomático, Transnasal, Transinusal, Vomer e combinações híbridas — em um único método estruturado, com protocolos claros do planejamento à finalização.</p>
                 </div>
                 <div class="feat rv" data-d="2">
                     <div class="frow"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><div class="ftxt"><b>6 módulos completos</b><span>Do fundamento à execução avançada</span></div></div>
