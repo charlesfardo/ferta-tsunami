@@ -177,9 +177,14 @@
         /* ====== PLATE (congresso) ====== */
         .plate { position: relative; background: var(--bg); }
         .plate-media { position: relative; max-height: 520px; overflow: hidden; }
-        .plate-media img { width: 100%; display: block; object-fit: cover; max-height: 520px; }
-        .plate-media::after { content:''; position:absolute; inset:0; background: linear-gradient(to top, var(--bg) 4%, rgba(10,13,12,0.35) 45%, rgba(10,13,12,0.55) 100%); }
-        .plate-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding-bottom: 42px; }
+        .plate-media img { width: 100%; display: block; object-fit: cover; max-height: 520px; filter: brightness(0.8) saturate(0.95) contrast(1.02); }
+        .plate-media::after {
+            content:''; position:absolute; inset:0; pointer-events:none;
+            background:
+              linear-gradient(to top, var(--bg) 0%, rgba(10,13,12,0.94) 16%, rgba(10,13,12,0.66) 40%, rgba(10,13,12,0.28) 68%, transparent 100%),
+              linear-gradient(to right, rgba(10,13,12,0.72) 0%, rgba(10,13,12,0.22) 52%, transparent 80%);
+        }
+        .plate-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding-bottom: 42px; text-shadow: 0 1px 16px rgba(0,0,0,0.45); }
         .plate-cap .tag { display:inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
         .plate-cap h3 { font-size: clamp(25px, 3.2vw, 40px); font-weight: 700; max-width: 18ch; margin-bottom: 12px; }
         .plate-cap p { color: var(--txt-dark-mut); max-width: 62ch; font-size: 16px; }
